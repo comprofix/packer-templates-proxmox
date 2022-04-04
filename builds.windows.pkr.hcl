@@ -10,11 +10,11 @@ packer {
 build {
   sources = ["source.proxmox-iso.windows10"]
 
-  provisioner "windows-update" {
-    filters         = ["exclude:$_.Title -like 'Preview'", "include:$true"]
-    search_criteria = "IsInstalled=0"
-    update_limit    = 25
-  }
+  #provisioner "windows-update" {
+  #  filters         = ["exclude:$_.Title -like 'Preview'", "include:$true"]
+  #  search_criteria = "IsInstalled=0"
+  #  update_limit    = 25
+  #}
 
   provisioner "windows-shell" {
     scripts = ["scripts/sysprep.bat"]

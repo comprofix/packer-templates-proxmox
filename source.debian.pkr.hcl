@@ -6,6 +6,10 @@ source "proxmox-iso" "debian" {
     insecure_skip_tls_verify    = "true"
     node                    = "${var.proxmox_node}"
 
+    # Cloud init enable
+    cloud_init = true
+    cloud_init_storage_pool = "storage0"
+
     # Location Configuration
     vm_name                 = "debian-11.3.0-amd64"
     vm_id                   = "9005"
