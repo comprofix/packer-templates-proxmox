@@ -1,0 +1,15 @@
+variable "proxmox_host" {
+  default = "https://PROXMOX_IP_ADDRESS:8006/api2/json"
+}
+
+variable "proxmox_node" {
+  default = "PROMOX_NODE"
+}
+
+variable "proxmox_api_user" {
+  default = "PROXMOX_USER"
+}
+
+variable "proxmox_api_password" {
+  default = "PROXMOX_PASSWORD"
+}
